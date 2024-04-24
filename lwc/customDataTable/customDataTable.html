@@ -1,0 +1,24 @@
+<template>
+    <lightning-datatable
+            key-field="id"
+            data={data}
+            columns={columns}>
+    </lightning-datatable>
+    <div class="slds-align_absolute-center slds-p-top_small">
+        <lightning-button-icon
+            disabled={disablePrev}
+            icon-name="utility:left"
+            alternative-text={buttonLeftLabel}
+            title={buttonLeftLabel}
+            onclick={handlePrevious}>
+        </lightning-button-icon>
+        <span class="slds-p-horizontal_small">{currentPage} / {totalPages}</span>
+        <lightning-button-icon
+            disabled={disableNext}
+            icon-name="utility:right"
+            alternative-text={buttonRightLabel}
+            title={buttonRightLabel}
+            onclick={handleNext}>
+        </lightning-button-icon>
+    </div>
+</template>
